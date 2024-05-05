@@ -1,0 +1,73 @@
+<html>
+    <head>
+      <title> Gestos manuales </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+        
+          <center>
+    
+            <h3 class="btn btn-info heding">APP EMOCIÓN A EMOTICÓN
+            <br><br>
+            <span>&#128077;</span>
+            <span>&#x270c;</span>
+            <span>&#x270a;</span>
+            <span>&#x1faf0;</span>
+            <span>&#x1f44c;</span>
+            <span>&#x1f919;</span>
+            <span>&#x1f449;</span>
+          </h3>
+            <p style="font-size: 22px;">Toma tu foto para generar un emoji
+                <br>
+              <b style="color: yellow">¿Estás feliz?</b>
+              <br>
+              <b style="color: rgb(0, 47, 255)">¿Estás triste?</b>
+              <br>
+              <b style="color: red">¿Estás enojado/a?</b>
+              <br>
+            </p>
+           
+            <!--Div para ver la cámara-->
+            <div class="col-md-4 col-sm-12 col-xs-12">
+              <label>Vista previa de la cámara -</label>
+              <div id="camera"></div>
+              <br><br>
+              <button onclick="take_snapshot();" class="btn btn-info"> Capturar imagen</button>
+            </div>
+    
+            <div class="col-md-4 col-sm-12 col-xs-12">
+              <label>Prediccion 1 -</label>
+              <p class="gesture_name" id="result_gesture_name"></p>
+    
+              <label>Prediccion 2 -</label>
+              <p class="gesture_name" id="result_gesture_name2"></p>
+              <p class="gesture" id="update_gesture2"></p>
+    
+    
+            </div>
+      
+            <!--Div para ver el resultado-->  
+            <div class="col-md-4 col-sm-12 col-xs-12">
+              <label>Intantánea - </label>
+              <div id="result"></div>
+              <br><br>
+              <button onclick="check();" class="btn btn-info"> Predecir emocion</button>
+            </div>
+      
+          </center>
+      
+        </div>
+      
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>.
+      <script src="main.js"></script>
+      
+        </body>
